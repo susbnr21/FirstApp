@@ -5,7 +5,7 @@ class Greeting extends Component {
   render () {
     return (
       <View style={{alignItems='center'}}>
-        <Text>Hello {this.props.name}!</Text>
+        <Text>Hello {this.name}!</Text>
       </View>
     );
   }
