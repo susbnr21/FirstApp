@@ -4,7 +4,7 @@ import { Text, View } from 'react-native';
 class Greeting extends Component {
   render() {
     return (
-      <View style={{alignItems: 'center', justifyContent: 'center'}}>
+      <View style={{flex: 1, alignItems: "center", justifyContent: "center"}}>
         <Text>Hello {this.props.name}!</Text>
       </View>
     );
@@ -14,7 +14,7 @@ class Greeting extends Component {
 export default class LotsOfGreeting extends Component {
   render() {
     return (
-      <View style={{alignItems: 'center', justifyContent: 'center'}}>
+      <View style={{flex: 1, alignItems: "center", justifyContent: "center"}}>
           <Greeting name = 'Sushil'/>
           <Greeting name = 'Sulav'/>
           <Greeting name = 'Summit'/>
