@@ -4,9 +4,19 @@ import { Text, View } from 'react-native';
 export default class HelloWorldApp extends Component {
   render() {
     return (
-      <View style={{justifyContent: "center", alignItems: "center", flex: 1}}>
-        <Text> Hello World !!! </Text>
+      <View style={styles.wrapper}>
+        <Text style={styles.title}> Hello World !!! </Text>
+        <Text style={styles.subtitle}> Welcome to my App. </Text>
       </View>
     );
   }
 }
+
+const style = StyleSheet.create({
+    wrapper: {
+      backgroundColor: 'red',
+      flex: 1,
+      justifyContent: 'center',
+      alignItems: 'center'
+    },
+})
