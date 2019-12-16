@@ -14,7 +14,7 @@ class Greeting extends Component {
 export default class LotsOfGreeting extends Component {
   render() {
     return (
-      <View style={{flex: 0.75, alignItems: "center", justifyContent: "center"}}>
+      <View style={{flex: 0, alignItems: "center", justifyContent: "center"}}>
           <Greeting name = 'Sushil'/>
           <Greeting name = 'Sulav'/>
           <Greeting name = 'Summit'/>
