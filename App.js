@@ -7,7 +7,7 @@ export default class Bananas extends Component {
       uri: 'https://upload.wikimedia.org/wikipedia/commons/d/de/Bananavarieties.jpg'
     };
     return (
-      <Image source={pic} style={{width: 193, height: 110}} style={{justifyContent="center"}}/>
+      <Image source={pic} style={{width: 193, height: 110}}/>
     );
   }
 }
