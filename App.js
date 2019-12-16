@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Splash from './app/splash';
 import { Text, View } from 'react-native';
 
 class Greeting extends Component {
