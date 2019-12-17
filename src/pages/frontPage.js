@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, View, StyleSheet, StatusBar, Button, Alert, TouchableOpacity } from 'react-native';
+import { Text, View, StyleSheet, StatusBar, Button, Alert, TouchableOpacity} from 'react-native';
 import Logo from '../components/logo';
 
 export default class Login extends Component {
