@@ -19,7 +19,7 @@ export default class Login extends Component {
 
 const styles = StyleSheet.create({
     container : {
-      backgroundColor: '#DCD1CE',
+      backgroundColor: '#1c313a',
       flex: 1,
       alignItems: 'center',
       justifyContent: 'center'
@@ -38,7 +38,7 @@ const styles = StyleSheet.create({
     },
 
     miniText: {
-        color: '#9C2828',
+        color: '#ED0000',
         fontFamily: 'Chalkboard SE',
         fontSize: 15,
         fontWeight: 'bold'
@@ -46,15 +46,16 @@ const styles = StyleSheet.create({
 
     button: {
         width: 250,
-        backgroundColor: '#D65C5C',
+        backgroundColor: '#ED0000',
         marginVertical: 30,
-        paddingVertical: 10,
-        marginTop: 120,
+        paddingVertical: 6,
+        marginTop: 80,
+        marginBottom: 100,
         borderRadius: 35
     },
 
     buttonText: {
-        fontSize: 35,
+        fontSize: 30,
         fontFamily: 'Chalkboard SE',
         textAlign: 'center',
         color: '#000000',
