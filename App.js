@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, View, StyleSheet, StatusBar } from 'react-native';
+import { Text, View, StyleSheet, StatusBar, Button } from 'react-native';
 import { Colors } from 'react-native/Libraries/NewAppScreen';
 import Login from './src/pages/login';
 
@@ -20,18 +20,11 @@ export default class App extends Component {
 
 const styles = StyleSheet.create({
   container : {
-    backgroundColor: '#4a6572',
+    backgroundColor: '#DCD1CE',
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center'
   },
-
-  titleText : {
-    color: 'white',
-    alignItems: 'center',
-    justifyContent: 'center'
-    
-  }
 });
 
 
