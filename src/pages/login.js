@@ -29,7 +29,12 @@ const styles = StyleSheet.create({
         color: 'black',
         fontSize: 40,
         fontFamily: 'Chalkboard SE',
-        fontWeight: '500'
+        fontWeight: '500',
+        marginTop: 180,
+        marginBottom: 20,
+        //backgroundColor: '#E3B4B4',
+        width: 450,
+        textAlign: 'center'
     },
 
     miniText: {
@@ -41,9 +46,11 @@ const styles = StyleSheet.create({
 
     button: {
         width: 250,
-        backgroundColor: '#A84141',
+        backgroundColor: '#D65C5C',
         marginVertical: 30,
-        paddingVertical: 16
+        paddingVertical: 10,
+        marginTop: 120,
+        borderRadius: 35
     },
 
     buttonText: {
