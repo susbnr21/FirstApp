@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import { Text, View, StyleSheet, StatusBar } from 'react-native';
+import Logo from '../components/logo';
 
 export default class Login extends Component {
     render() {
         return (
             <View style={styles.container}>
-                
+                <Logo/>
             </View>
         );
     }
