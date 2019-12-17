@@ -35,7 +35,8 @@ const styles = StyleSheet.create({
     miniText: {
         color: '#9C2828',
         fontFamily: 'Chalkboard SE',
-        fontSize: 15
+        fontSize: 15,
+        fontWeight: 'bold'
     },
 
     button: {
