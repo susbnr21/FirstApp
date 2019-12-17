@@ -12,7 +12,7 @@ export default class HelloWorldApp extends Component {
   }
 }
 
-const style = StyleSheet.create({
+const styles = StyleSheet.create({
     wrapper: {
       backgroundColor: 'red',
       flex: 1,
