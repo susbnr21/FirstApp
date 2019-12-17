@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Text, View, StyleSheet, StatusBar, Button } from 'react-native';
 import { Colors } from 'react-native/Libraries/NewAppScreen';
-import Login from './src/pages/login';
+import Login from './src/pages/frontPage';
 
 
 export default class App extends Component {
