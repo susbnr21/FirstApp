@@ -4,7 +4,7 @@ import { Text, View, StyleSheet, StatusBar } from 'react-native';
 export default class Logo extends Component {
     render() {
         return (
-            <Text></Text>
+            <Text>Logo</Text>
         );
     }
 }
