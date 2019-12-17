@@ -7,7 +7,7 @@ export default class App extends Component {
     return (
       <View style={styles.container}>
       <StatusBar
-      backgroundColor= "white"
+      backgroundColor= "#1c31ca"
       barStyle="light-content"
       />
         <Text style={{color: '#ffffff', fontSize: 20}}>Hello There!!!</Text>
