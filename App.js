@@ -20,10 +20,17 @@ export default class App extends Component {
 
 const styles = StyleSheet.create({
   container : {
-    backgroundColor: '#455a64',
+    backgroundColor: '#4a6572',
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center'
+  },
+
+  titleText : {
+    color: 'white',
+    alignItems: 'center',
+    justifyContent: 'center'
+    
   }
 });
 

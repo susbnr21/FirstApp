@@ -6,7 +6,8 @@ export default class Login extends Component {
     render() {
         return (
             <View style={styles.container}>
-                <Logo/>
+                <Text style={styles.titleText}>WELCOME TO</Text>
+                    <Logo/>
             </View>
         );
     }
@@ -14,9 +15,16 @@ export default class Login extends Component {
 
 const styles = StyleSheet.create({
     container : {
-      backgroundColor: '#455a64',
+      backgroundColor: '#4a6572',
       flex: 1,
       alignItems: 'center',
       justifyContent: 'center'
+    },
+
+    titleText: {
+        color: 'black',
+        fontSize: 40,
+        fontFamily: 'Chalkboard SE',
+        fontWeight: '500'
     }
-  });
+  })
