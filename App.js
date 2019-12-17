@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Text, View, StyleSheet, StatusBar } from 'react-native';
 import { Colors } from 'react-native/Libraries/NewAppScreen';
+import Login from './src/pages/login';
 
 export default class App extends Component {
   render() {
@@ -10,7 +11,7 @@ export default class App extends Component {
       backgroundColor= "#1c31ca"
       barStyle="light-content"
       />
-        <Text style={{color: '#ffffff', fontSize: 20}}>Hello There!!!</Text>
+        <Login/>
       </View>
     );
   }
