@@ -9,10 +9,6 @@ export default class Login extends Component {
                 <Text style={styles.titleText}>WELCOME TO</Text>
                     <Logo/>
                 <Text style={styles.miniText}>Nepal's First Online Platform for Shifting Your Stay</Text>
-                {/* <Button
-                title="Get Started"
-                onPress={() => Alert.alert('So Lets Get Started')}
-                /> */}
                 <TouchableOpacity style={styles.button} onPress={() => Alert.alert('So Lets Get Started')}>
                     <Text style={styles.buttonText}>Get Started</Text>
                 </TouchableOpacity>
@@ -37,23 +33,23 @@ const styles = StyleSheet.create({
     },
 
     miniText: {
-        color: '#B24343',
+        color: '#9C2828',
         fontFamily: 'Chalkboard SE',
         fontSize: 15
     },
 
     button: {
         width: 250,
-        backgroundColor: '#B24343',
+        backgroundColor: '#A84141',
         marginVertical: 30,
-        paddingVertical: 16,
-        borderRadius: 25
+        paddingVertical: 16
     },
 
     buttonText: {
         fontSize: 35,
         fontFamily: 'Chalkboard SE',
         textAlign: 'center',
-        color: '#DCD1CE'
+        color: '#000000',
+        fontWeight: '500'
     }
   })
