@@ -38,7 +38,7 @@ const styles = StyleSheet.create({
     },
 
     miniText: {
-        color: '#ED0000',
+        color: '#cc0000',
         fontFamily: 'Chalkboard SE',
         fontSize: 15,
         fontWeight: 'bold'
@@ -46,7 +46,7 @@ const styles = StyleSheet.create({
 
     button: {
         width: 250,
-        backgroundColor: '#ff0000',
+        backgroundColor: '#cc0000',
         marginVertical: 30,
         paddingVertical: 6,
         marginTop: 80,
