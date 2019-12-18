@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Text, View, StyleSheet, StatusBar, Button, Alert, TouchableOpacity} from 'react-native';
 import Logo from '../components/logo';
+import {  } from 'react-navigation';
 
 export default class Login extends Component {
     render() {
@@ -9,7 +10,9 @@ export default class Login extends Component {
                 <Text style={styles.titleText}>WELCOME TO</Text>
                     <Logo/>
                 <Text style={styles.miniText}>Nepal's First Online Platform for Shifting Your Stay</Text>
-                <TouchableOpacity style={styles.button} onPress={() => Alert.alert('So Lets Get Started')}>
+                <TouchableOpacity title = "Register Here" 
+                style={styles.button}
+                onPress={() => Alert.alert('So Lets Get Started')}>
                     <Text style={styles.buttonText}>Get Started</Text>
                 </TouchableOpacity>
             </View>
