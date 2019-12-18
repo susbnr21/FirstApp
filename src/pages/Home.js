@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, View, StyleSheet, StatusBar, Button, Alert, TouchableOpacity, Title} from 'react-native';
+import { Text, View, StyleSheet, StatusBar, TouchableOpacity, Title} from 'react-native';
 import Logo from '../components/logo';
 
 class Home extends Component {
@@ -8,13 +8,7 @@ class Home extends Component {
         };
     render() {
         return (
-            <View style={styles.container}>
-                <View style={styles.secondContainer}>
-                    <StatusBar
-                    backgroundColor= "#1c31ca"
-                    barStyle="light-content"
-                    />
-                        <Login/>
+                <View style={styles.container}>
                     <Text style={styles.titleText}>WELCOME TO</Text>
                         <Logo/>
                     <Text style={styles.miniText}>Nepal's First Online Platform for Shifting Your Stay</Text>
@@ -23,7 +17,6 @@ class Home extends Component {
                         <Title style={styles.buttonText}>Get Started</Title>
                     </TouchableOpacity>
                 </View>
-            </View>
         );
     }
 }
@@ -32,13 +25,6 @@ export default Home;
 
 const styles = StyleSheet.create({
     container : {
-        backgroundColor: '#DCD1CE',
-        flex: 1,
-        alignItems: 'center',
-        justifyContent: 'center'
-    },
-
-    secondContainer : {
       backgroundColor: '#3d3d5c',
       flex: 1,
       alignItems: 'center',

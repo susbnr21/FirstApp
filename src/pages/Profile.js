@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Text, View, StyleSheet,
-        StatusBar, TextInput, Button, Alert, 
+        StatusBar, TextInput, 
         TouchableOpacity} from 'react-native';
 
 class Profile extends Component {
@@ -9,7 +9,7 @@ class Profile extends Component {
         }
     render() {
         return(
-            <OuterArea style={styles.container}>
+            <OuterArea style={styles.design}>
                 <StatusBar barStyle='light-content'/>
                 <KeyboardAvoidingView behavior='padding' style={styles.container}>
                     <TouchableWithoutFeedback style={styles.container} onPress={Keyboard.dismiss}>
@@ -51,8 +51,8 @@ class Profile extends Component {
 
 export default Profile;
 
-const styles = StyleSheet.container({
-    container: {
+const styles = StyleSheet.create({
+    design: {
         flex: 1,
         backgroundColor: 'rgb(32, 53, 70)',
         flexDirection: 'column',
@@ -102,8 +102,9 @@ const styles = StyleSheet.container({
 
     buttonText: {
         textAlign: 'center',
-        color: 'rgba(32, 53, 70)',
+        color: '#000000',
         fontWeight: 'bold',
-        fontWeight: 18
+        fontWeight: '100'
     }
 })
+
