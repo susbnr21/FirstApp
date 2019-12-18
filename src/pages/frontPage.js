@@ -19,7 +19,7 @@ export default class Login extends Component {
 
 const styles = StyleSheet.create({
     container : {
-      backgroundColor: '#1c313a',
+      backgroundColor: '#3d3d5c',
       flex: 1,
       alignItems: 'center',
       justifyContent: 'center'
@@ -46,7 +46,7 @@ const styles = StyleSheet.create({
 
     button: {
         width: 250,
-        backgroundColor: '#ED0000',
+        backgroundColor: '#ff0000',
         marginVertical: 30,
         paddingVertical: 6,
         marginTop: 80,
