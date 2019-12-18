@@ -2,9 +2,8 @@ import React, { Component } from 'react';
 import { Text, View, StyleSheet,
         StatusBar, TextInput, Button, Alert, 
         TouchableOpacity} from 'react-native';
-import { createStackNavigator } from 'react-navigation';
 
-class Profile extends React.Component {
+class Profile extends Component {
         static navigationOption = {
             title: 'Profile'
         }

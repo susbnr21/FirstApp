@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import { Text, View, StyleSheet, StatusBar, Button, Alert, TouchableOpacity, Title} from 'react-native';
 import Logo from '../components/logo';
-import { createStackNavigator } from 'react-navigation';
 
-class Home extends React.Component {
+class Home extends Component {
         static navigationOptions = {
             title: 'Home'
         };
