@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
-import { Text, View, StyleSheet } from 'react-native';
+import { Text, View, StyleSheet, StatusBar } from 'react-native';
 import Routes from "./Routes";
-const App = () => <Routes/>
+//const App = () => <Routes/>
 
-export default App;
+//export default Home;
 
-class Home extends Component {
+export default class App extends React.Component {
     render() {
       return (
         <View style={styles.container}>
@@ -13,7 +13,7 @@ class Home extends Component {
         backgroundColor= "#1c31ca"
         barStyle="light-content"
         />
-          <Login/>
+          <Routes/>
         </View>
       );
     }
