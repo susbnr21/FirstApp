@@ -6,6 +6,7 @@ import { createAppContainer } from 'react-navigation';
   const AppNavigator = createStackNavigator({
     Home: { screen: Home },
     Profile: { screen: Profile},
+    headerMode: 'none'
   });
 
   export default createAppContainer(AppNavigator);

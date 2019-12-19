@@ -2,6 +2,9 @@ import React from 'react';
 import { StyleSheet, Text, View, Button } from 'react-native';
 
 export default class Profile extends React.Component {
+    static navigationOptions = {
+        headerStyle: {borderBottomWidth: 0}
+      }
   render() {
     return (
       <View style={styles.container}>

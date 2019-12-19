@@ -1,38 +1,32 @@
 import React from 'react';
-import { StyleSheet, Text, View, Button, StatusBar } from 'react-native';
+import { StyleSheet, Text, View, Button, StatusBar, TouchableOpacity } from 'react-native';
 import Logo from '../components/logo';
 
 export default class Home extends React.Component {
+    static navigationOptions = {
+        headerStyle: {backgroundColor: '#3d3d5c', borderBottomWidth: 0}
+      }
+
     render() {
         return (
-            <View style={styles.container}>
-                <StatusBar barStyle='light-content'/>
-                    <View style={styles.secondContainer}>
+                <View style={styles.secondContainer}>
+                    <StatusBar barStyle='light-content'/>
                         <Text style={styles.titleText}>WELCOME TO</Text>
                             <Logo/>
                         <Text style={styles.miniText}>Nepal's First Online Platform for Shifting Your Stay</Text>
-                        <Button
-                            title="Get Started"
-                            style={styles.buttons}
-                            style={styles.buttonText}
-                            onPress={() =>
-                                this.props.navigation.navigate('Profile')
-                            }
-                            />
-                    </View>
-            </View>
+                        <TouchableOpacity 
+                                style={styles.button} 
+                                onPress={() =>
+                                this.props.navigation.navigate('Profile')}>
+                                <Text style={styles.buttonText}>Get Started</Text>
+                        </TouchableOpacity>
+
+                </View>
         );
     }
 }
 
 const styles = StyleSheet.create({
-    container: {
-        backgroundColor: '#455a64',
-        flex: 1,
-        alignItems: 'center',
-        justifyContent: 'center'
-    },
-
     secondContainer : {
       backgroundColor: '#3d3d5c',
       flex: 1,
@@ -59,13 +53,13 @@ const styles = StyleSheet.create({
         fontWeight: 'bold'
     },
 
-    buttons: {
+    button: {
         width: 250,
         backgroundColor: '#cc0000',
         marginVertical: 30,
         paddingVertical: 6,
         marginTop: 80,
-        marginBottom: 100,
+        marginBottom: 200,
         borderRadius: 35
     },
 

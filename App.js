@@ -1,21 +1,24 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, StatusBar } from 'react-native';
 import AppNavigator from './AppNavigator';
 
 export default class Home extends React.Component {
   render() {
     return (
-          <AppNavigator/>
+          <AppNavigator
+            style={styles.container}
+          />
       
     );
   }
 }
 
-// const styles = StyleSheet.create({
-//   container: {
-//     flex: 1,
-//     backgroundColor: '#fff',
-//     alignItems: 'center',
-//     justifyContent: 'center',
-//   },
-// });
+const styles = StyleSheet.create({
+  container: {
+      backgroundColor: '#455a64',
+      marginBottom: 100,
+      alignItems: 'center',
+      justifyContent: 'center'
+  }
+
+});
