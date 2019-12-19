@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, Button } from 'react-native';
+import { StyleSheet, Text, View, Button, Image } from 'react-native';
 
 export default class Profile extends React.Component {
     static navigationOptions = {
@@ -8,9 +8,14 @@ export default class Profile extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>Add friends here!</Text>
+        <View style={styles.logoContainer}>
+            <Image style={styles.logo}
+                source={require('../images/Logo.png')}>
+            </Image>
+            <Text style={styles.title}>Account Information</Text>
+        </View>
         <Button
-          title="Back to home"
+          title="LOG IN"
           onPress={() =>
             this.props.navigation.navigate('Home')
           }
@@ -27,4 +32,15 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+
+  logoContainer: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    flex: 1,
+},
+
+    logo: {
+        width: 128,
+        height: 128,
+},
 });
