@@ -1,30 +1,39 @@
-import React, { Component } from 'react';
-import { Text, View, StyleSheet, StatusBar, TouchableOpacity, Title} from 'react-native';
+import React from 'react';
+import { StyleSheet, Text, View, Button, StatusBar } from 'react-native';
 import Logo from '../components/logo';
 
-class Home extends Component {
-        static navigationOptions = {
-            title: 'Home'
-        };
+export default class Home extends React.Component {
     render() {
         return (
-                <View style={styles.container}>
-                    <Text style={styles.titleText}>WELCOME TO</Text>
-                        <Logo/>
-                    <Text style={styles.miniText}>Nepal's First Online Platform for Shifting Your Stay</Text>
-                    <TouchableOpacity style={styles.button}
-                    onPress={() => this.props.navigation.navigate('Profile')}>
-                        <Title style={styles.buttonText}>Get Started</Title>
-                    </TouchableOpacity>
-                </View>
+            <View style={styles.container}>
+                <StatusBar barStyle='light-content'/>
+                    <View style={styles.secondContainer}>
+                        <Text style={styles.titleText}>WELCOME TO</Text>
+                            <Logo/>
+                        <Text style={styles.miniText}>Nepal's First Online Platform for Shifting Your Stay</Text>
+                        <Button
+                            title="Get Started"
+                            style={styles.buttons}
+                            style={styles.buttonText}
+                            onPress={() =>
+                                this.props.navigation.navigate('Profile')
+                            }
+                            />
+                    </View>
+            </View>
         );
     }
 }
 
-export default Home;
-
 const styles = StyleSheet.create({
-    container : {
+    container: {
+        backgroundColor: '#455a64',
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center'
+    },
+
+    secondContainer : {
       backgroundColor: '#3d3d5c',
       flex: 1,
       alignItems: 'center',
@@ -50,7 +59,7 @@ const styles = StyleSheet.create({
         fontWeight: 'bold'
     },
 
-    button: {
+    buttons: {
         width: 250,
         backgroundColor: '#cc0000',
         marginVertical: 30,
