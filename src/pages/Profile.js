@@ -1,5 +1,8 @@
 import React from 'react';
-import { StyleSheet, Text, View, Button, Image, TextInput, StatusBar, KeyboardAvoidingView, TouchableWithoutFeedback, Keyboard } from 'react-native';
+import { StyleSheet, Text, View,
+     Image, TextInput, StatusBar, 
+     KeyboardAvoidingView, TouchableWithoutFeedback, Keyboard } 
+     from 'react-native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
 
@@ -46,7 +49,7 @@ export default class Profile extends React.Component {
                     <TouchableOpacity
                         style={styles.buttonContainer}
                         onPress={() =>
-                            this.props.navigation.navigate('Registration')}>
+                            this.props.navigation.navigate('')}>
                         <Text style={styles.buttonText}>LOG IN </Text>
                     </TouchableOpacity>
 
@@ -54,8 +57,7 @@ export default class Profile extends React.Component {
 
                     <TouchableOpacity
                     onPress={() =>
-                        {alert('Then lets register!');
-                        }}>
+                        this.props.navigation.navigate('Registration')}>
                         <Text style={styles.buttontxt}>Register Now</Text>
                     </TouchableOpacity>
 
@@ -125,13 +127,6 @@ const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: 'rgb(32, 53, 70)',
         flexDirection: 'column',
-    },
-
-    separator: {
-        color: 'black',
-        marginVertical: 8,
-        borderBottomColor: '#737373',
-        borderBottomWidth: StyleSheet.hairlineWidth
     },
 
     txt:{

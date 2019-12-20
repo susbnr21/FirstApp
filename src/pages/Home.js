@@ -1,12 +1,12 @@
 import React from 'react';
-import { StyleSheet, Text, View, Button, StatusBar, TouchableOpacity, ImageBackground } from 'react-native';
+import { StyleSheet, Text, View, StatusBar, TouchableOpacity } from 'react-native';
 import Logo from '../components/logo';
 
 export default class Home extends React.Component {
     static navigationOptions = {
         headerStyle: {backgroundColor: '#8B8C8C', borderBottomWidth: 0}
       }
-
+    
     render() {
         return (
             <View style={styles.secondContainer}>
@@ -41,7 +41,6 @@ const styles = StyleSheet.create({
         fontWeight: '500',
         marginTop: 180,
         marginBottom: 20,
-        //backgroundColor: '#E3B4B4',
         width: 450,
         textAlign: 'center'
     },
