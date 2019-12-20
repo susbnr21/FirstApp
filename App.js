@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, StatusBar } from 'react-native';
+import { StyleSheet } from 'react-native';
 import AppNavigator from './AppNavigator';
 
 export default class Home extends React.Component {
@@ -20,5 +20,4 @@ const styles = StyleSheet.create({
       alignItems: 'center',
       justifyContent: 'center'
   }
-
 });

@@ -1,34 +1,34 @@
 import React from 'react';
-import { StyleSheet, Text, View, Button, StatusBar, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, Button, StatusBar, TouchableOpacity, ImageBackground } from 'react-native';
 import Logo from '../components/logo';
 
 export default class Home extends React.Component {
     static navigationOptions = {
-        headerStyle: {backgroundColor: '#3d3d5c', borderBottomWidth: 0}
+        headerStyle: {backgroundColor: '#8B8C8C', borderBottomWidth: 0}
       }
 
     render() {
         return (
-                <View style={styles.secondContainer}>
-                    <StatusBar barStyle='light-content'/>
-                        <Text style={styles.titleText}>WELCOME TO</Text>
-                            <Logo/>
-                        <Text style={styles.miniText}>Nepal's First Online Platform for Shifting Your Stay</Text>
-                        <TouchableOpacity 
-                                style={styles.button} 
-                                onPress={() =>
-                                this.props.navigation.navigate('Profile')}>
-                                <Text style={styles.buttonText}>Get Started</Text>
-                        </TouchableOpacity>
+            <View style={styles.secondContainer}>
+                <StatusBar barStyle='light-content'/>
+                    <Text style={styles.titleText}>WELCOME TO</Text>
+                        <Logo/>
+                    <Text style={styles.miniText}>Nepal's First Online Platform for Shifting Your Stay</Text>
+                    <TouchableOpacity 
+                        style={styles.button} 
+                        onPress={() =>
+                        this.props.navigation.navigate('Profile')}>
+                        <Text style={styles.buttonText}>Get Started</Text>
+                    </TouchableOpacity>
 
-                </View>
+            </View>
         );
     }
 }
 
 const styles = StyleSheet.create({
     secondContainer : {
-      backgroundColor: '#3d3d5c',
+      backgroundColor: '#8B8C8C',
       flex: 1,
       alignItems: 'center',
       justifyContent: 'center'

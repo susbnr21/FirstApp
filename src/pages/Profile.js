@@ -2,10 +2,16 @@ import React from 'react';
 import { StyleSheet, Text, View, Button, Image, TextInput, StatusBar, KeyboardAvoidingView, TouchableWithoutFeedback, Keyboard } from 'react-native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
+
 export default class Profile extends React.Component {
     static navigationOptions = {
-        headerStyle: {backgroundColor: '#3d3d5c', borderBottomWidth: 0}
+        headerStyle: {backgroundColor: '#8B8C8C', borderBottomWidth: 0}
       }
+
+    constructor(props){
+        super(props);
+        this.state = {Email:'', Password:'', error:'', loading:false}
+    }
 
   render() {
     return (
@@ -22,9 +28,8 @@ export default class Profile extends React.Component {
                     </View>
                     <View style={styles.infoContainer}>
                         <TextInput style={styles.input}
-                            placeholder='Username or email'
+                            placeholder='Email'
                             placeholderTextColor='rgba(255,255,255,0.8)'
-                            keyboardType='email-address'
                             returnKeyType='next'
                             autoCorrect={false}
                             onSubmitEditing={() => this.refs.txtPassword.focus()}
@@ -32,18 +37,28 @@ export default class Profile extends React.Component {
                         <TextInput style={styles.input}
                             placeholder='Password'
                             placeholderTextColor='rgba(255,255,255,0.8)'
-                            keyboardType='go'
                             secureTextEntry
                             autoCorrect={false}
                             ref={'txtPassword'}
                             />
                     </View>
+
                     <TouchableOpacity
                         style={styles.buttonContainer}
                         onPress={() =>
-                            this.props.navigation.navigate('Home')}>
+                            this.props.navigation.navigate('Registration')}>
                         <Text style={styles.buttonText}>LOG IN </Text>
                     </TouchableOpacity>
+
+                        <Text style={styles.txt}>New to Rental Shifters?</Text>
+
+                    <TouchableOpacity
+                    onPress={() =>
+                        {alert('Then lets register!');
+                        }}>
+                        <Text style={styles.buttontxt}>Register Now</Text>
+                    </TouchableOpacity>
+
                 </View>
             </TouchableWithoutFeedback>
         </KeyboardAvoidingView>
@@ -55,7 +70,7 @@ export default class Profile extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#3d3d5c',
+    backgroundColor: '#8B8C8C',
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -81,8 +96,9 @@ const styles = StyleSheet.create({
     input: {
         height: 50,
         backgroundColor: 'rgba(255,255,255,0.2)',
-        color: '#FFF',
-        width: 250,
+        textAlign: 'center',
+        color: '#302F35',
+        width: 300,
         marginBottom: 15,
         paddingHorizontal: 10,
         borderRadius: 35
@@ -91,14 +107,14 @@ const styles = StyleSheet.create({
     buttonContainer: {
         width: 200,
         backgroundColor: '#cc0000',
-        marginVertical: 50,
-        paddingVertical: 1,
-        marginTop: 80,
-        borderRadius: 25
+        marginVertical: 25,
+        paddingVertical: 6,
+        marginTop: 1,
+        borderRadius: 35
     },
 
     buttonText: {
-        fontSize: 30,
+        fontSize: 25,
         fontFamily: 'Chalkboard SE',
         textAlign: 'center',
         color: '#000000',
@@ -109,5 +125,26 @@ const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: 'rgb(32, 53, 70)',
         flexDirection: 'column',
+    },
+
+    separator: {
+        color: 'black',
+        marginVertical: 8,
+        borderBottomColor: '#737373',
+        borderBottomWidth: StyleSheet.hairlineWidth
+    },
+
+    txt:{
+        fontFamily: 'Chalkboard SE',
+        fontSize: 16
+    },
+
+    buttontxt: {
+        color: 'blue',
+        textDecorationLine: 'underline',
+        fontSize: 16,
+        fontFamily: 'Chalkboard SE',
+        textAlign: 'center',
+        marginBottom: 30,
     }
 });
