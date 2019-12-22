@@ -1,3 +1,8 @@
+//L3C11_SUSHIL_BHANDARI_17031188
+//RENTAL SHIFTERS APP
+
+
+
 import React from 'react';
 import { StyleSheet } from 'react-native';
 import AppNavigator from './AppNavigator';
