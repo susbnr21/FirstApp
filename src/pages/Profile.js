@@ -14,11 +14,6 @@ export default class Profile extends React.Component {
         headerStyle: {backgroundColor: '#8B8C8C', borderBottomWidth: 0}
       }
 
-    constructor(props){
-        super(props);
-        this.state = {Email:'', Password:'', error:'', loading:false}
-    }
-
   render() {
     return (
     <View style={styles.design}>
