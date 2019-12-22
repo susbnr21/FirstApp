@@ -39,6 +39,12 @@ export default class Registration extends React.Component {
                                 this.props.navigation.navigate('')}>
                                 <Text style={styles.regbtntxt}>Register</Text>
                         </TouchableOpacity>
+                        <Text style={styles.btnacc}>Already Have an Account?</Text>
+                        <TouchableOpacity
+                        onPress={() => 
+                            this.props.navigation.navigate('Profile')}>
+                            <Text style={styles.loginbtn}>LOG IN</Text>
+                        </TouchableOpacity>
                     </View>
                 </TouchableWithoutFeedback>
             </KeyboardAvoidingView>
@@ -61,8 +67,8 @@ const styles = StyleSheet.create({
   },
 
   header: {
-      fontSize: 50,
-      color: '#cc0000',
+      fontSize: 40,
+      color: '#000000',
       paddingBottom: 10,
       marginBottom: 40,
       textDecorationLine: 'underline',
@@ -94,5 +100,20 @@ const styles = StyleSheet.create({
     fontFamily: 'Chalkboard SE',
     textAlign: 'center',
     fontWeight: '500'
-  }
+  },
+
+  btnacc: {
+    fontFamily: 'Chalkboard SE',
+    fontSize: 16,
+    marginTop: 50,
+  },
+
+  loginbtn: {
+    color: 'blue',
+    textDecorationLine: 'underline',
+    fontSize: 16,
+    fontFamily: 'Chalkboard SE',
+    textAlign: 'center',
+    marginBottom: 30,
+}
 });
