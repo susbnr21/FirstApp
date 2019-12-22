@@ -1,3 +1,6 @@
+//L3C11_SUSHIL_BHANDARI_17031188
+//RENTAL SHIFTERS APP
+
 import React from 'react';
 import { StyleSheet, Text, View,
     Image, TouchableOpacity, StatusBar, 

@@ -1,3 +1,6 @@
+//L3C11_SUSHIL_BHANDARI_17031188
+//RENTAL SHIFTERS APP
+
 import { createStackNavigator } from 'react-navigation-stack';
 import { createAppContainer } from 'react-navigation';
   import Home from './src/pages/Home';
