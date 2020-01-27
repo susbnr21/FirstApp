@@ -3,7 +3,7 @@
 
 import React from 'react';
 import { StyleSheet, Text, View,
-     Image, TextInput, StatusBar, 
+     Image, TextInput, StatusBar, ImageBackground,
      KeyboardAvoidingView, TouchableWithoutFeedback, Keyboard } 
      from 'react-native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
@@ -11,16 +11,17 @@ import { TouchableOpacity } from 'react-native-gesture-handler';
 
 export default class Profile extends React.Component {
     static navigationOptions = {
-        headerStyle: {backgroundColor: '#8B8C8C', borderBottomWidth: 0}
+        headerStyle: {backgroundColor: '#8B8C8C', borderBottomWidth: 0},
+        header: null,
       }
 
   render() {
     return (
-    <View style={styles.design}>
+    <ImageBackground source={require('../images/boxs.jpeg')} style={styles.container}>
         <StatusBar barStyle='light-content'/>
-        <KeyboardAvoidingView behavior='padding' style={styles.container}>
-            <TouchableWithoutFeedback style={styles.container} onPress={Keyboard.dismiss}>
-                <View style={styles.container}>
+        <KeyboardAvoidingView behavior='padding'>
+            <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
+                <View style={styles.content}>
                     <View style={styles.logoContainer}>
                         <Image style={styles.logo}
                             source={require('../images/Logo.png')}>
@@ -47,7 +48,7 @@ export default class Profile extends React.Component {
                     <TouchableOpacity
                         style={styles.buttonContainer}
                         onPress={() =>
-                            this.props.navigation.navigate('')}>
+                            this.props.navigation.navigate('Dashboard')}>
                         <Text style={styles.buttonText}>LOG IN </Text>
                     </TouchableOpacity>
 
@@ -62,15 +63,19 @@ export default class Profile extends React.Component {
                 </View>
             </TouchableWithoutFeedback>
         </KeyboardAvoidingView>
-    </View>
+    </ImageBackground>
     );
   }
 }
 
 const styles = StyleSheet.create({
+    content: {
+        alignItems: 'center',
+        justifyContent: 'center'
+    },
+
   container: {
     flex: 1,
-    backgroundColor: '#8B8C8C',
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -110,7 +115,8 @@ const styles = StyleSheet.create({
         marginVertical: 25,
         paddingVertical: 6,
         marginTop: 1,
-        borderRadius: 35
+        borderRadius: 35,
+        marginBottom: 100
     },
 
     buttonText: {

@@ -2,17 +2,20 @@
 //RENTAL SHIFTERS APP
 
 import React from 'react';
-import { StyleSheet, Text, View, StatusBar, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, StatusBar, TouchableOpacity, ImageBackground } from 'react-native';
 import Logo from '../components/logo';
+
+ 
 
 export default class Home extends React.Component {
     static navigationOptions = {
-        headerStyle: {backgroundColor: '#8B8C8C', borderBottomWidth: 0}
+        headerStyle: {backgroundColor: '#8B8C8C', borderBottomWidth: 0},
+        header: null,
       }
     
     render() {
         return (
-            <View style={styles.secondContainer}>
+            <ImageBackground source={require('../images/boxs.jpeg')} style={styles.secondContainer}>
                 <StatusBar barStyle='light-content'/>
                     <Text style={styles.titleText}>WELCOME TO</Text>
                         <Logo/>
@@ -23,8 +26,7 @@ export default class Home extends React.Component {
                         this.props.navigation.navigate('Profile')}>
                         <Text style={styles.buttonText}>Get Started</Text>
                     </TouchableOpacity>
-
-            </View>
+            </ImageBackground>
         );
     }
 }
@@ -42,7 +44,7 @@ const styles = StyleSheet.create({
         fontSize: 40,
         fontFamily: 'Chalkboard SE',
         fontWeight: '500',
-        marginTop: 180,
+        marginTop: 240,
         marginBottom: 20,
         width: 450,
         textAlign: 'center'

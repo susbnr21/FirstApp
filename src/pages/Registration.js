@@ -3,28 +3,28 @@
 
 import React from 'react';
 import { StyleSheet, Text, View,
-    Image, TouchableOpacity, StatusBar, 
+    Image, TouchableOpacity, StatusBar,ImageBackground,
     KeyboardAvoidingView, TouchableWithoutFeedback, Keyboard } 
     from 'react-native';
 import { TextInput } from 'react-native-gesture-handler';
 
 export default class Registration extends React.Component {
     static navigationOptions = {
-        headerStyle: {backgroundColor: '#8B8C8C', borderBottomWidth: 0}
+        headerStyle: {backgroundColor: '#fff', borderBottomWidth: 0},
+        header: null,
       }
 
   render() {
     return (
-        <View style={styles.regform}>
+      <View style={styles.regform}>
+        <ImageBackground source={require('../images/boxs.jpeg')} style={styles.regform}>
             <StatusBar barStyle='light-content'/>
             <KeyboardAvoidingView behavior='padding'>
                 <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
-                    <View style={styles.regform}>
+                    <View style={styles.regis}>
                         <Image style={styles.logos}
                             source={require('../images/Logo.png')}>
                         </Image>
-
-                        <Text style={styles.header}>Registration</Text>
 
                         <TextInput style={styles.textinput}
                                     placeholder='Your Name'/>
@@ -36,46 +36,52 @@ export default class Registration extends React.Component {
                                     placeholder='Your Password'
                                     secureTextEntry={true}/>
 
+                        <TextInput style={styles.textinput}
+                                    placeholder='Confirm Password'
+                                    secureTextEntry={true}/>
+
                         <TouchableOpacity
                             style={styles.regbtncontainer}
                             onPress={() =>
                                 this.props.navigation.navigate('')}>
                                 <Text style={styles.regbtntxt}>Register</Text>
                         </TouchableOpacity>
+
                         <Text style={styles.btnacc}>Already Have an Account?</Text>
+
                         <TouchableOpacity
                         onPress={() => 
                             this.props.navigation.navigate('Profile')}>
                             <Text style={styles.loginbtn}>LOG IN</Text>
                         </TouchableOpacity>
+                        
                     </View>
                 </TouchableWithoutFeedback>
             </KeyboardAvoidingView>
-        </View>
+        </ImageBackground>
+      </View>
     );
   }
 }
 
 const styles = StyleSheet.create({
+  regis: {
+    alignItems: 'center',
+    justifyContent: 'center'
+  },
+
   regform: {
     alignSelf: 'stretch',
     flex: 1,
-    backgroundColor: '#8B8C8C',
-    alignItems: 'center'
+    alignItems: 'center',
+    justifyContent: 'center',
   },
 
   logos: {
     width: 128,
     height: 128,
-  },
-
-  header: {
-      fontSize: 40,
-      color: '#000000',
-      paddingBottom: 10,
-      marginBottom: 40,
-      textDecorationLine: 'underline',
-      fontFamily: 'Chalkboard SE'
+    marginBottom: 40,
+    marginTop: 200,
   },
 
   textinput: {
@@ -108,7 +114,7 @@ const styles = StyleSheet.create({
   btnacc: {
     fontFamily: 'Chalkboard SE',
     fontSize: 16,
-    marginTop: 50,
+    marginTop: 90,
   },
 
   loginbtn: {
@@ -117,6 +123,6 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontFamily: 'Chalkboard SE',
     textAlign: 'center',
-    marginBottom: 30,
+    marginBottom: 140,
 }
 });
